@@ -92,8 +92,9 @@ h1 {
 }
 
 body {
-    background: radial-gradient(100% 100% at 0 50%, #bc9b69c7, #806443);
-    overflow-x: hidden;
+    background     : radial-gradient(100% 100% at 0 50%, #bc9b69c7, #806443);
+    overflow-x     : hidden;
+    scroll-behavior: smooth;
 }
 
 .container-fluid {
@@ -409,7 +410,7 @@ footer p {
     text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 576px) {
 
     .container-fluid {
         overflow-x: hidden;
@@ -550,15 +551,116 @@ footer p {
     }
 
     .sales-container {
-        flex-direction: column;
-        row-gap       : 20px;
+        flex-wrap: wrap;
+        row-gap  : 20px;
     }
 
-    .sales-content {
-        width: 80vw;
-    }
 
     .sales-content img {
         width: 100%;
+    }
+
+    .sales-content {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .experienced-num {
+        display: none;
+    }
+
+
+    .container-fluid {
+        overflow-x: hidden;
+    }
+
+    nav {
+        justify-content: flex-start;
+        flex-direction : column;
+        padding        : 20px 10px;
+    }
+
+    .logo img {
+        width: 25px;
+    }
+
+    nav h1,
+    .dropbtn {
+        font-size: 1.5em;
+    }
+
+    .intro {
+        padding    : 50px 8vw;
+        padding-top: 350px;
+    }
+
+    .intro img {
+        top   : 30%;
+        height: 60vh;
+    }
+
+    #disc-banner {
+        translate    : 0 0;
+        right        : -50px;
+        top          : 0;
+        width        : 50vw;
+        border-radius: 0 0 50px 50px;
+    }
+
+    #d31,
+    #d1 {
+        display: none;
+    }
+
+    .product-list p {
+        width : 80vw;
+        margin: auto;
+    }
+
+    .product-list .list-container {
+        padding: 30px 20px;
+        gap    : 20px;
+    }
+
+    .sales-content {
+        width: 100%;
+    }
+
+    .sales-content img {
+        width     : 100%;
+        object-fit: scale-down;
+        height    : fit-content;
+    }
+
+    .sales-container {
+        padding: 40px 50px;
+    }
+
+
+    #rf,
+    #tf {
+        display: none;
+    }
+
+    #rc,
+    #tc {
+        object-fit: scale-down;
+        width     : 150px;
+        z-index   : 1;
+    }
+
+    #rc {
+        translate: -100% 10px;
+        left     : 110px;
+        top      : 15px;
+        rotate   : -35deg;
+    }
+
+    #tc {
+        translate: 100% -10px;
+        right    : 110px;
+        top      : 35px;
+        rotate   : 35deg;
     }
 }
